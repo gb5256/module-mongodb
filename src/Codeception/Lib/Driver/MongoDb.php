@@ -124,7 +124,7 @@ class MongoDb
     {
         [$host, $port] = $this->getHostPort();
         $cmd = sprintf(
-            "mongorestore %s --host %s --port %s -d %s %s %s",
+            "mongorestore %s --host %s --port %s --ssl --tlsInsecure -d %s %s %s",
             $this->quiet,
             $host,
             $port,
